@@ -29,9 +29,10 @@ Feature: Login
    When I click the link labelled "HOME"
    Then I should be taken to the page "https://courses.letskodeit.com/"
 
-  Scenario: Connect to database
-   Given I am using the "Chrome" web browser
-   And I have opened the web page "https://www.google.com/"
-   And the following "Student" items stored in the web application
-    | Surname  | Forename| Matriculation |
-    | "Storer" | "Tim"   | "1234567s"    |
+
+  #Scenario: Connect to database
+   #Given I am using the "Chrome" web browser
+   #And I have opened the web page "https://www.google.com/"
+   #And the following "Student" items stored in the web application
+    #| Surname  | Forename| Matriculation |
+    #| "Storer" | "Tim"   | "1234567s"    |

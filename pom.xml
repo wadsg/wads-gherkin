@@ -6,7 +6,7 @@
 
     <groupId>io.github.wadsg</groupId>
     <artifactId>wads-gherkin</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <name>wads-gherkin</name>
     <description>Defines standard Gherkin steps for controlling a web browser through Selenium.</description>

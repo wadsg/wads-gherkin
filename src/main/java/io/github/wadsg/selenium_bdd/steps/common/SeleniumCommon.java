@@ -43,7 +43,7 @@ public class SeleniumCommon {
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager manager = WebDriverManager.getInstance(CHROME);
             ChromeOptions options = new ChromeOptions();
-            manager.version("93");
+            manager.version("107");
             manager.timeout(10000).setup();
             options.setHeadless(false);
             Fixture.driver = new ChromeDriver(options);
