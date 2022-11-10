@@ -19,7 +19,7 @@ Defines standard Gherkin steps for controlling a web browser through Selenium.
   <dependency>
   <groupId>io.github.wadsgio.github.wadsg</groupId>
   <artifactId>wads-gherkin</artifactId>
-  <version>0.0.1</version>
+  <version>1.0.1</version>
   </dependency>
 ```
 
