@@ -5,10 +5,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import static io.github.wadsg.selenium_bdd.steps.Fixture.driver;
-
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 public class SeleniumHTML5 {
@@ -18,9 +18,34 @@ public class SeleniumHTML5 {
             Utility.getInputWebElementNearest(label, "radio").click();
     }
 
-    @When("^I click the radio button with label \"(.*)\"$")
-    public void i_click_the_radio_button_with_label(String label) {
-        Utility.getInputWebElementNearest(label, "radio").click();
+    @When("^I click the radio button below the label \"(.*)\"$")
+    public void i_click_the_radio_button_below_the_label(String label) {
+
+        WebElement inputElement = null;
+
+            try {
+                inputElement = driver.findElement(By.xpath("//p[contains(.,'" + label + "')]"));
+            }catch(NoSuchElementException noSuchElementException){
+
+            }
+
+        if(inputElement != null) {
+
+            try {
+                driver.findElement(withTagName("input").below(inputElement)).click();
+            } catch (NoSuchElementException noSuchElementException) {
+
+            }
+        }
+
+        if(inputElement != null) {
+
+            try {
+                driver.findElement(withTagName("button").below(inputElement)).click();
+            } catch (NoSuchElementException noSuchElementException) {
+
+            }
+        }
     }
 
     @When("^I select the value \"(.*)\" from the drop down list nearest the label \"(.*)\"$")

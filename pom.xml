@@ -6,7 +6,7 @@
 
     <groupId>io.github.wadsg</groupId>
     <artifactId>wads-gherkin</artifactId>
-    <version>1.0.1</version>
+    <version>1.3.1</version>
 
     <name>wads-gherkin</name>
     <description>Defines standard Gherkin steps for controlling a web browser through Selenium.</description>
@@ -187,7 +187,7 @@
       <dependency>
           <groupId>io.github.bonigarcia</groupId>
           <artifactId>webdrivermanager</artifactId>
-          <version>3.0.0</version>
+          <version>5.3.3</version>
       </dependency>
 
       <dependency>

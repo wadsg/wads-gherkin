@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 import static io.github.wadsg.selenium_bdd.steps.Fixture.driver;
 
@@ -30,6 +29,47 @@ public class Utility {
 
             }
         }
+
+        if(labelElement == null){
+            try {
+                labelElement = driver.findElement(By.xpath("//h5[contains(.,'" + label + "')]"));
+            }catch(NoSuchElementException noSuchElementException){
+
+            }
+        }
+
+        if(labelElement == null){
+            try {
+                labelElement = driver.findElement(By.xpath("//h4[contains(.,'" + label + "')]"));
+            }catch(NoSuchElementException noSuchElementException){
+
+            }
+        }
+
+        if(labelElement == null){
+            try {
+                labelElement = driver.findElement(By.xpath("//h3[contains(.,'" + label + "')]"));
+            }catch(NoSuchElementException noSuchElementException){
+
+            }
+        }
+
+        if(labelElement == null){
+            try {
+                labelElement = driver.findElement(By.xpath("//span[contains(.,'" + label + "')]"));
+            }catch(NoSuchElementException noSuchElementException){
+
+            }
+        }
+
+        if(labelElement == null){
+            try {
+                labelElement = driver.findElement(By.xpath("//p[contains(.,'" + label + "')]"));
+            }catch(NoSuchElementException noSuchElementException){
+
+            }
+        }
+
 
         if(labelElement != null) {
             List<WebElement> webElements =
