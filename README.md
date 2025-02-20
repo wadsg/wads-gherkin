@@ -4,7 +4,7 @@ Defines standard Gherkin steps for controlling a web browser through Selenium.
 
 ## Contributors
 
-- Abdullah Alshammari ([a.alshammari.2@research.gla.ac.uk](mailto:a.alshammari.2@research.gla.ac.uk)
+- Abdullah Alshammari ([a.alshammari.2@research.gla.ac.uk](mailto:a.alshammari.2@research.gla.ac.uk))
 - Tim Storer ([timothy.storer@glasgow.ac.io](mailto:timothy.storer@glasgow.ac.uk))
 
 ## Getting Started
